@@ -4,7 +4,7 @@ import numpy as np
 
 class GiniCoefficientCalculator:
     def lorentz_curve(self, wealths):
-        curve_points = []
+        curve_points = [(0.0, 0.0)]
         sum_wealths = sum(wealths)
         population = len(wealths)
 
