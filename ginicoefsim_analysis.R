@@ -14,3 +14,5 @@ remove(alphas)
 remove(pops)
 remove(gini_coef.mean)
 remove(gini_coef.std)
+
+ggplot(ginisim.statres[ ginisim.statres$population>=100000,], aes(x=alpha, y=gini_coef.mean, colour=population, group=population))+geom_errorbar(aes(ymin=gini_coef.mean-gini_coef.std, ymax=gini_coef.mean+gini_coef.std))+ggtitle(expression(paste('Gini Coefficients vs ', alpha)))
